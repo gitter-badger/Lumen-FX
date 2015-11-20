@@ -1,4 +1,4 @@
-#**LumenFX**
+#LumenFX
 
 ##Introduction
 
