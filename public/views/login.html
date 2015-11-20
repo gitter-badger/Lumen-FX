@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html ng-app="subApp">
+<head>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js"></script> 
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.min.js"></script> 
+<link rel="stylesheet"  type="text/css" href="../css/bootstrap.min.css">
+<link rel="stylesheet"  type="text/css" href="../css/bootstrap-theme.min.css">
+<link rel="stylesheet" type="text/css" href="../css/main.css">
+<link rel="stylesheet" type="text/css" href="../css/login.css">
+<title>Login</title>
+</head>
+<body>
+	<script src="../seneca/init.js"></script>
+	<script src="../angular.js"></script>
+	
+ 
+    
+	<div class="container">
+		<div id="minimize-window" class="btn top-btn minimizeBtn" style="height:16px;">
+			<div class="minimize-bar"></div>
+		</div>
+		<div id="close-app" class="btn top-btn closeBtn">x</div>
+	</div>
+	
+	<form action="/auth/login" method="POST" autocomplete="on">
+		<div ng-controller="loginCtrl" class="content" style="position:relative;top:200px;display:inline-block;margin:auto;">
+		   <img src="../img/logo.png" style="width:201.7px;height:101.7px;position:relative;">
+			<table class="table borderless">
+			<tbody>
+		<tr><td>
+		<div class="form-group" ng-class="userDivClass">
+		<input id="username" name="username" class="form-control" type="text" ng-model="username" placeholder="Username" onkeyup="return forceLower(this);">
+		<span ng-class="userClass"></span>
+    </div>
+		</td></tr>
+		<tr><td>
+			
+	<div class="form-group" ng-class="passDivClass">
+		<input type="password" name="password" class="form-control" id="password" ng-model="password" placeholder="Password">
+		<span ng-class="passwordClass"></span>
+    </div>
+		
+		</td></tr>
+			<tr><td><button class="btn quickbtn" style="width:150px;" type="submit" ng-if="validated">Login</button></td></tr>
+			<tr><td><input type="checkbox" id="rememberMe" ng-click="" data-ng-model="remember">Remember Username</td></tr>
+			<tr><td>
+						<a href="../views/register.html">Not a member?</a></td></tr>
+			</tbody>
+			</table>
+        </div>
+    </form>
+ 
+</body>
+
+<script src="../js/animations.js"></script>
+<script src="../js/utils.js"></script>
+<script src="../js/inter-app.js"></script>
+</html>

@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Notifications</title>
+        <meta name="description" content="OpenFin Hello World">
+		<link rel="stylesheet"  type="text/css" href="../css/bootstrap.min.css">
+		<link rel="stylesheet"  type="text/css" href="../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="../css/main.css">
+    </head>
+    <body>
+        <div class="notification-body pad-top">
+			<span id="time-text"></span><br>
+            <span id="notification-text"></span>
+        </div>
+	<script type="text/javascript">
+            // messages received from the application creating the application
+            function onNotificationMessage(message) {
+				
+				var date = new Date();
+				var text = "";
+					if(message.name != undefined){
+						if(message.dir == "buy")
+							text += " Bought ";
+						else
+							text += "Sold ";
+			  	text += displayAmount(message.amount);
+				text += " " + message.name ;
+				document.querySelectorAll('#time-text')[0].innerHTML = new Date().toLocaleString();
+					}else{
+						text = message;
+					}
+                document.querySelectorAll('#notification-text')[0].innerHTML = text;
+            }
+            fin.desktop.main();
+			
+		function displayAmount(n,x) {
+			if ( x != undefined)
+				return  x + " " + n.toFixed(2).replace( /(\d)(?=(\d{3})+\.)/g, "$1,");
+			else
+				return  n.toFixed(2).replace( /(\d)(?=(\d{3})+\.)/g, "$1,");
+		}
+	</script>
+    </body>
+</html>

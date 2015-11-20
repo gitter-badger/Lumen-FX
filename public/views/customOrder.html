@@ -1,0 +1,86 @@
+<!--
+    <LumenFX: An FX system designed and built by thecitysecret>
+    Copyright (C) 2015 thecitysecret
+
+	This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+   GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+   along with this program.  If not, see <http://www.gnu.org/licenses/>.
+-->
+
+<!doctype html>
+<html ng-app="subApp" >
+    <head>
+        <meta charset="utf-8">
+        <title>Advanced Order</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js"></script>
+<script src="/seneca/init.js"></script>
+<script src="../angular.js"></script>
+<link rel="stylesheet" href="../css/index.css">
+<link rel="stylesheet" href="../css/main.css">
+</head>
+	
+  <body >
+	  <div id="left"></div>
+<div id="right"></div>
+<div id="top"></div>
+<div id="bottom"></div>
+		
+        <div class="container of-draggable">
+				<h2 class="top">Advanced Order</h2>
+            <div id="minimize-window" class="btn top-btn minimizeBtn">
+                <div class="minimize-bar"></div>
+            </div>
+            <div id="close-app" class="btn top-btn closeBtn">x</div>
+		</div>
+			
+		<div class="content" id="orders">
+			<div ng-controller="customOrderCtrl">
+				<form class="orderForm" name="myForm">
+					<div class="direction">	
+	<input class="customOrder {{limit}}" type="button" ng-model="limitType" value ="LIMIT" ng-click="setType('limit')"/>
+	<input class="customOrder stop {{stop}}" type="button" ng-model="stopType" value ="STOP" ng-click="setType('stop')"/>
+					<p></p>
+					</div>
+					
+			<div id ="box">
+			<label>Instrument</label>
+				<input type="text" class="instrument" disabled ng-model="pairs.id"/>
+					<p></p>
+			<label>Amount</label>
+		
+			<input type="text" id="amount" autofocus="autofocus" 
+			   class="amount customOrder" min="0" maxlength="14" ng-model="amount" ng-blur="display()" valid-number/>
+					<p></p>
+				<label>Price</label>
+						<input type="number" id="price" class="amount customOrder" 
+							   min="0" step="0.001" ng-model="price" required/>	
+						<p></p>
+				<input class="customOrder buy" type="button" 
+					   ng-model="buyDir" value ="set buy {{orderType}} " ng-click="insertAdvanceOrder('buy')"/>
+				<input class="customOrder sell" type="button" 
+					   ng-model="sellDir" value ="set sell {{orderType}}" ng-click="insertAdvanceOrder('sell')"/>
+				</div>
+			<div style="text-align:center">
+					
+			</div>
+				</form>
+            </div>
+        </div>
+    </body>
+
+<script src="../js/animations.js"></script>
+<script src="../js/utils.js"></script>
+<script src="../js/inter-app.js"></script>
+<script src="../js/escape.js"></script>
+</html>

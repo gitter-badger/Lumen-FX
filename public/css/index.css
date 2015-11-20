@@ -1,0 +1,671 @@
+/**
+ *	<LumenFX: An FX system designed and built by thecitysecret>
+ *  Copyright (C) 2015 thecitysecret
+ *
+ *	This program is free software: you can redistribute it and/or modify
+ *  it under the terms of the GNU General Public License as published by
+ *  the Free Software Foundation, either version 3 of the License, or
+ *  (at your option) any later version.
+ *
+ *  This program is distributed in the hope that it will be useful,
+ *  but WITHOUT ANY WARRANTY; without even the implied warranty of
+ *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ *  GNU General Public License for more details.
+ *
+ *  You should have received a copy of the GNU General Public License
+ *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ */
+
+h2{
+	margin: 0;
+	padding: 0;
+}
+
+.title{
+	position: relative;
+	top:-10px;
+}
+
+.top{
+margin-top: 10px;
+}
+
+table a{
+	text-decoration: none;
+	color:#4597BF;
+	cursor: pointer;
+}
+
+#background{
+	height: 100%;
+	width:100%;
+	background: url("../img/background.jpg");
+	opacity: 0.5;
+	z-index: -5;
+}
+
+.largerText{
+	position: relative;
+	top:-5px;
+	font-weight: 500;
+	font-size:33px;
+	color:#1980B1;
+	margin-left: 2px;
+	margin-right: 2px;
+}
+
+.lastText{
+	position: relative;
+	top: -20px;
+	left: -10px;
+	font-size: 11px;
+	color: #14709C;
+}
+
+.hover:hover{
+	background-color: #CBCBCB;
+	cursor: pointer;
+	}
+
+.currencyPairs{
+	position:relative;
+	height:420px;
+	overflow:hidden;
+}
+
+.left{
+	padding-left: 3px;
+}
+
+.increasedPrice{
+position:absolute;
+left:60px;
+}
+
+.decreasedPrice{
+position:absolute;
+left:15px;
+}
+
+.spread{
+padding-left:5px;
+}
+
+.currencyPairs:hover{
+	overflow-y: scroll;
+}
+
+.currencyTable{
+	position:relative;
+	border: 2px solid #535353;
+	margin: 2px;
+	width:340px;
+	float:left;
+	font-family:'Open Sans', sans-serif;
+	background-color :#D6D6D6;
+	color:#4597BF;
+	z-index: 1;
+}
+
+#currencyHeading{
+	font-size:15px;
+}
+
+#currencyInput{
+	font-family: 'Open Sans', sans-serif;
+}
+
+.showMore td{
+	font-size: 14px;
+	font-family:'Open Sans', sans-serif;
+}
+
+.addTable{
+	position: relative;
+	border: 2px solid #535353;
+	margin: 2px;
+	float:left;
+	width:340px;
+	height:120px;
+	background-color : #D6D6D6;
+	-webkit-app-region: no-drag;
+}
+
+.originalRate{
+	position: relative;
+	font-size:13px;
+	font-weight: 600;
+	font-family:'Open Sans', sans-serif;
+}
+
+#circleBuy{
+	position: relative;
+	left:5px;
+	width:96px;
+	height:96px;
+	background-color: #BDEABD;
+	border-radius: 50%;
+}
+
+#circleSell{
+	position: relative;
+	width:96px;
+	height:96px;
+	background-color: #FFCECE;
+	border-radius: 50%;
+}
+
+#circleBuy:hover{
+	background-color: #6BEE6B;
+}
+
+#circleSell:hover{
+	background-color: #F78787;
+}
+
+.smallFont{
+	font-size:11px;
+	color:#14709C;
+}
+
+.content{
+	position:relative;
+	top:40px;
+	-webkit-app-region: no-drag;
+}
+
+.exit{
+border:none;
+	cursor: pointer;
+	position:relative;
+	font-weight: bold;
+	font-size:18px;
+	background: rgba(0,0,0,0);
+	color:#3B3B3B;
+	float:right;
+	outline-color: #4597BF;
+}
+
+.axis path,
+.axis line {
+	fill: none;
+	stroke: whitesmoke;
+shape-rendering: crispEdges;
+}
+
+.x.axis path {
+	display: none;
+}
+
+.axis{
+	color:red;
+}
+
+.line {
+	fill: none;	
+	stroke: whitesmoke;	
+	stroke-width: 1.5px;	
+}
+
+.linechart{
+	position: relative;	
+	float:right;	
+}
+
+.sidebar{
+	position:relative;	
+	height:220px;	
+	overflow: hidden;	
+}
+
+.sidebar svg{
+	float:left;	
+}
+
+.profitChart:hover{
+	overflow-y: scroll;	
+}
+
+.sideTable{
+	position: relative;
+	top:30px;
+	margin:5px;
+	text-align: center;
+	width:100%;
+	border: 2px solid #535353;
+	margin: 2px;
+	font-weight:bold;
+	background-color :#D6D6D6;
+	color:#4597BF;
+}
+
+.sideTable td{
+	width:20%;
+	font-size: 13px;
+}
+
+.footer{
+	top:60px;
+	height:200px;
+	width:700px;
+	overflow: hidden;
+}
+
+.footer:hover{
+	overflow-y: scroll;
+}
+
+#quickButtonDiv{
+	position:relative;
+	top:50px;
+}
+
+.scroll::-webkit-scrollbar-thumb {
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	background-color: darkgrey;
+}
+
+.scroll::-webkit-scrollbar-track {
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+}
+
+.scroll::-webkit-scrollbar {
+	width: 10px;
+	-webkit-app-region: no-drag;
+}
+
+body{
+	overflow-x: hidden;
+}
+
+body::-webkit-scrollbar-thumb {
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	background-color: darkgrey;
+}
+
+body::-webkit-scrollbar-track {
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+}
+
+body::-webkit-scrollbar {
+	width: 10px;
+	-webkit-app-region: no-drag;
+}
+
+input[type="text"],input[type="number"]{
+	background-color: #C9C9C9;
+	color:#4597BF;
+	border-radius: 4px;
+	width:140px;
+	height:20px;
+	border: solid #c9ced1 1px;
+	font-size: 16px;
+	color:darkslategray;
+	border:none;
+	text-align:center;
+	font-size: 14px;
+	outline-color: #4597BF;
+}
+
+input{
+	-webkit-app-region: no-drag;
+}
+
+#rightdiv{
+	width:300px;
+	position: relative;
+	float:left;
+	left:20px;
+	top:100px;
+}
+
+.rightdiv{
+	position: relative;
+	float:left;
+	margin:5px;
+	height:30px;	
+	width:120px;
+}
+
+.label{
+	display:inline-block;
+	text-align: left;
+	width:130px;
+	float:left;
+	margin-left:15px;
+	padding-left:2px;
+	padding-right:2px;
+	-webkit-app-region: no-drag;
+	color: darkslategray;
+}
+
+.outerbar{
+	position: relative;
+	left:25px;
+	width:3px;
+	height:50px;
+	background-color: gray;
+	z-index:1;
+}
+
+.innerbar{
+	transform: rotate(90deg);
+	height:5px;
+	background-color: black;
+	z-index:2;
+}
+
+.compress{
+	width:50px;
+}
+
+.open{
+	transform: rotate(90deg);
+	position: relative;
+	left:1px;
+	height:20px;
+	width:2px;
+	background-color: black;
+	z-index:3;
+}
+
+.ng-hide:not(.ng-hide-animate) {
+	/* this is just another form of hiding an element */
+	display: block!important;
+	position: absolute;
+	top: -9999px;
+	left: -9999px;
+}
+
+select{
+	width:60px;
+	border-radius:3px;
+	background-color:#CECECE;
+	outline-color: #4597BF;
+	-webkit-app-region: no-drag;
+	}
+
+option{
+	outline-color: #4597BF;	
+}
+
+.orderForm label{
+	-webkit-app-region: no-drag;
+	margin:2px;
+	display: inline-block;
+	color: darkslategray;
+	width:80px;
+}
+
+.orderForm select{
+	margin-left:5px;
+}
+
+.orderForm{
+	text-align:left;
+	font-size: 14px;
+}
+
+.traderDiv{
+	position: absolute;
+	right:0px;
+	bottom:0px;
+	color: #05576A;
+}
+
+.right{
+	width:300px;
+	-webkit-app-region: no-drag;
+	height:420px;
+	float:left;
+	position: relative;
+	top:50px;
+	right:0px;
+}
+
+td { 
+	position: relative; 
+}
+
+tr.rejectedrow td:before {
+	content: " ";
+	position: absolute;
+	top: 45%;
+	left: 0;
+	border-bottom: 2px solid #111;
+	width: 100%;
+}
+
+tr.rejectedrow td:after {
+	content: "\00B7";
+	font-size: 1px;
+}
+
+#tradeHistoryTable{
+	border-collapse: collapse;
+}
+
+.rejectedrow{
+	background-color: #37525F;
+}
+
+.pendingrow{
+	background-color: #089CE4;
+}
+
+g{
+	fill: black;
+	color: black;
+}
+
+.chart{
+	color: black;
+	fill: black;
+}
+
+.executedrow{
+	background-color: #2E6986;
+}
+
+.openrow{
+	background-color: #1684B9;
+}
+
+.buyrow{
+	background-color:#1E8109;
+}
+
+.sellrow{
+	background-color:#D73636;
+}
+
+.inter-sparkline{
+	color:black;
+}
+
+.quickbtn{
+	-webkit-border-radius: 4;
+	-moz-border-radius: 4;
+	border-radius: 4px;
+	width:110px;
+	height:30px;
+	color: #1f1c1f;
+	font-size: 13px;
+	border: solid #c9ced1 1px;
+	text-decoration: none;
+	cursor: pointer;
+	outline-color: #4597BF;
+	font-family:'Open Sans', sans-serif;
+	font-weight: bold;
+}
+
+.quickbtn:hover {
+	background: #cfcfcf;
+	text-decoration: none;
+}
+
+.btnclicked {
+	position:relative;
+	background: rgb(165,156,161);
+	font-weight: bold;
+	z-index: 3;
+}
+
+.highLow{
+	position: relative;
+	color:#1980B1;
+	font-family:'Open Sans', sans-serif;
+	font-size: 11px;
+	font-weight:600;
+}
+
+.customOrder{
+	border-radius: 4px;
+	width:100px;
+	height:25px;
+	border: solid #c9ced1 1px;
+	cursor: pointer;
+	font-size: 16px;
+	text-align: center;
+	outline-color: #4597BF;
+	font-family:'Open Sans', sans-serif;
+}
+
+.amount{
+	cursor:text;
+}
+
+.buy{
+	background-color: #6BEE6B;
+	width:135px;
+	height:30px;
+
+}
+
+.direction{
+	font-size:25px;
+	margin-left:55px;
+}
+
+.sell{
+	background-color: #F78787;
+	width:135px;
+	height:30px;
+
+}
+
+.stop{
+	position: relative;
+	left:-35px;
+	z-index: 2;
+}
+
+.instrument{
+font-weight: bold;
+}
+
+#box{
+	display: inline-block;
+	padding-left: 5px;
+}
+
+#box label{
+	text-align: right;
+}
+
+input:focus{
+    box-shadow: outset 0 1px rgba(255,255,255,0.36), 0 0 0 2px #6fb5f1;
+}
+
+#orderTable table {
+	width: 100%;
+}
+
+#orderTable thead, #orderTable tbody, #orderTable tr,#orderTable  td, #orderTable th {	
+	display: block; 
+}
+
+#orderTable tr:after {
+	content: ' ';
+	display: block;
+	visibility: hidden;
+	clear: both;
+}
+
+#orderTable thead th {
+	height: 30px;
+	text-align: left;
+}
+
+#orderTable tbody {
+	height:200px;
+	overflow-y: auto;
+	font-size:15px;
+}
+
+#orderTable tbody td,#orderTable  thead th {
+	width:13.2%;
+	float: left;
+	text-align: center;
+}
+
+#myOrder{
+	font-size:12px;
+	color:ghostwhite;
+}
+
+.orderBox{
+	position: relative;
+	float:left;
+	height:190px;
+	width:220px;
+	border: 2px solid #535353;
+	margin: 2px;
+	font-family:'Open Sans', sans-serif;
+	font-weight:bold;
+	background-color :#D6D6D6;
+	color:#4597BF;
+	cursor: pointer;
+}
+
+#placeOrder{
+	margin:auto;
+}
+
+.searchBar{
+	margin-top:5px;
+	height:20px;
+	color:black;
+	font-size:18px;
+	font-weight: bold;
+	border-top:2px solid #333333;
+}
+
+.longBtn{
+	width:120px;
+}
+
+#top, #bottom, #left, #right {
+	background: grey;
+	position: fixed;
+	}
+
+	#left, #right {
+		top: 0; bottom: 0;
+		width: 5px;
+		}
+		#left { left: 0; }
+		#right { right: 0; }
+		
+	#top, #bottom {
+		left: 0; right: 0;
+		height: 5px;
+		}
+		#top { top: 0; }
+		#bottom { bottom: 0; }

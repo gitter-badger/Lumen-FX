@@ -1,0 +1,55 @@
+/**
+ *	<LumenFX: An FX system designed and built by thecitysecret>
+ *  Copyright (C) 2015 thecitysecret
+ *
+ *	This program is free software: you can redistribute it and/or modify
+ *  it under the terms of the GNU General Public License as published by
+ *  the Free Software Foundation, either version 3 of the License, or
+ *  (at your option) any later version.
+ *
+ *  This program is distributed in the hope that it will be useful,
+ *  but WITHOUT ANY WARRANTY; without even the implied warranty of
+ *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ *  GNU General Public License for more details.
+ *
+ *  You should have received a copy of the GNU General Public License
+ *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ */
+
+{
+  "apps" : 
+	[{
+	  "name"      : "order-service.js",
+	  "script"    : "./order-service.js",
+	  "args"      : "['--seneca.log.quiet']",
+	  "log_date_format" : "YYY-MM-DD HH:mm Z"
+	},
+	 {
+	  "name"      : "price-service.js",
+	  "script"    : "./price-service.js",
+	  "max_memory_restart" : "1500M",
+	  "args"      : "['--seneca.log.quiet']",
+	  "log_date_format" : "YYY-MM-DD HH:mm Z"
+	},
+	 {
+	  "name"      : "login-service.js",
+	  "script"    : "./login-service.js",
+	  "args"      : "['--seneca.log.quiet']",
+	  "log_date_format" : "YYY-MM-DD HH:mm Z"
+	},
+	 {
+	  "name"      : "historical-service.js",
+	  "script"    : "./historical-service.js",
+	  "args"      : "['--seneca.log.quiet']",
+	  "log_date_format" : "YYY-MM-DD HH:mm Z"
+	},
+	 {
+	  "name"      : "app-all.js",
+	  "script"    : "./app-all.js",
+	  "args"      : "['--seneca.log.quiet']",
+	  "log_date_format" : "YYY-MM-DD HH:mm Z"
+	}
+	]
+}
+
+//'--loglevel', 'warn or error' // configurable at logger.js

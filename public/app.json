@@ -1,0 +1,53 @@
+/**
+ *	<LumenFX: An FX system designed and built by thecitysecret>
+ *  Copyright (C) 2015 thecitysecret
+ *
+ *	This program is free software: you can redistribute it and/or modify
+ *  it under the terms of the GNU General Public License as published by
+ *  the Free Software Foundation, either version 3 of the License, or
+ *  (at your option) any later version.
+ *
+ *  This program is distributed in the hope that it will be useful,
+ *  but WITHOUT ANY WARRANTY; without even the implied warranty of
+ *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ *  GNU General Public License for more details.
+ *
+ *  You should have received a copy of the GNU General Public License
+ *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ */
+
+
+{
+    "devtools_port": 9090,
+    "startup_app": {
+        "name": "lumenFX",
+        "url": "http://localhost:3000/views/login.html",
+        "uuid": "lumenFX",
+        "applicationIcon": "http://localhost:3000/img/icon.png",
+        "autoShow": true,
+        "defaultHeight": 731,
+        "defaultWidth": 1120,
+        "maxWidth": 1200,
+        "maxHeight": 750,
+        "defaultTop": 50,
+        "defaultLeft": 10,
+		//"contextMenu":false,
+        "resizable": true,
+        "maximizable": false,
+        "frame": false,
+        "cornerRounding": {
+            "width": 5,
+            "height": 5
+        }
+    },
+    "runtime": {
+        "arguments": "",
+        "version": "stable"
+    },
+    "shortcut": {
+        "company": "OpenFin",
+        "description": "LumenFX Foreign Exchange System",
+        "icon": "http://localhost:3000/img/icon.ico",
+        "name": "LumenFX"
+    }
+}

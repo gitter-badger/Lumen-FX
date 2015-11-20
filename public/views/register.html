@@ -1,0 +1,69 @@
+<!--
+    <LumenFX: An FX system designed and built by thecitysecret>
+    Copyright (C) 2015 thecitysecret
+
+	This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+   GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+   along with this program.  If not, see <http://www.gnu.org/licenses/>.
+-->
+
+<!DOCTYPE>
+<html ng-app="subApp">
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
+<script src="../js/utils.js"></script>
+<script src="../js/animations.js"></script>
+<script src="http://crypto-js.googlecode.com/svn/tags/3.1.2/build/rollups/aes.js"></script>
+<script src="/seneca/init.js"></script>
+<script src="../angular.js"></script>
+<link rel="stylesheet"  type="text/css" href="../css/bootstrap.min.css">
+<link rel="stylesheet"  type="text/css" href="../css/bootstrap-theme.min.css">
+<link rel="stylesheet" href="../css/main.css">
+<link rel="stylesheet" href="../css/login.css">
+    <title>Registration</title>
+</head>
+    
+<body>
+	<div class="container">
+		<div id="minimize-window" class="btn top-btn minimizeBtn" style="padding-top:4px;height:16px;">
+			<div class="minimize-bar"></div>
+		</div>
+		<div id="close-app" class="btn top-btn closeBtn">x</div>
+	</div>
+	
+	<div ng-controller="registerCtrl" class="content">
+        <h1>Register</h1>
+			
+	<form>
+        <table class="table borderless">
+        <tbody>
+        <tr><td><input id="FirstName" type="text" name="name" ng-model="firstname" placeholder="First Name">&nbsp; &nbsp; &nbsp;<input id="LastName" type="text" ng-model="lastname" placeholder="Last Name"></td></tr>
+            
+        <tr><td><input id="email" type="text" name="email" ng-model="email" placeholder="Email Address">&nbsp; &nbsp; &nbsp;<input id="email2" type="text" ng-model="confirmemail" placeholder="Confirm Email Address"><span ng-show="tickemail" class="glyphicon glyphicon-ok-circle"></span>{{erroremail}}</td></tr>
+            
+        <tr><td><input id="username" type="text" ng-model="username" name="nick" placeholder="Username" onkeyup="return forceLower(this);">&nbsp; &nbsp; &nbsp;<input type="password" id="password" ng-model="password" name="password" placeholder="Password"></tr>
+            
+        <tr><td><input type="password" id="password2" ng-model="confirmpassword" placeholder="Confirm Password"><span ng-show="tickpass" class="glyphicon glyphicon-ok-circle"></span>{{error}}</tr>
+            
+        <tr><td><button class="btn btn-primary" ng-click="addTrader()">Create account</button></td></tr>
+        <tr><td><a href="./login.html">Already a member?</a></td></tr>
+        </tbody>
+        </table>
+	</form>
+	</div>
+   
+</body>
+<script src="../js/animations.js"></script>
+<script src="../js/utils.js"></script>
+<script src="../js/inter-app.js"></script>
+</html>
