@@ -6,7 +6,7 @@ LumenFX is an interactive platform that supports real-time financial data visual
 
 This application retrieves live rates from Yahoo and OANDA, it can subscribe to multiple source depending on which currency pairs are available from the sources. This applications receives the data from other sources and publish it into its' own API with SenecaJS to be used by other services. 
 
-LumenFX is released as Open Source Software under the [GPL3 licence](http://www.gnu.org/licenses/gpl-3.0.en.html)
+LumenFX is released as Open Source Software under the [Apache 2.0  licence](http://www.apache.org/licenses/LICENSE-2.0)
 
 
 ##SenecaJS Microservices
