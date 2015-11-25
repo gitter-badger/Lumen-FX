@@ -132,7 +132,7 @@ PriceService.prototype.subscribeYAHOO = function (){
 		if(response !== undefined){
 		  if (!error && response.statusCode == 200) {
 			  	if(JSON.parse(body).query.count == 0){
-						logger.warn("Please specify the currency pairs to be subscribed to.")
+						//logger.warn("Please specify the currency pairs to be subscribed to.")
 						//throw("Please Specify the currency pairs to be subscribed to.")
 					}
 					deferred.resolve(JSON.parse(body));

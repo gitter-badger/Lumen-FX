@@ -49,10 +49,10 @@ seneca.act({role:'priceAPI', cmd:'showPrice'},function(args,done){
 	
 setInterval(function(){
 	seneca.act({role:'priceAPI', cmd:'showPrice'},function(args,done){
-			currentPrice = done.data;
+			var currentPrice = done.data;
 
 		seneca.act({role:'orderAPI', cmd:'getCustomOrders'},function(args,done){
-				existingOrders = done.customOrders;
+				var existingOrders = done.customOrders;
 
 		if(currentPrice.length > 0 )
 			seneca.act({role:'orderAPI', cmd:'executeCustomOrders',data:[currentPrice,existingOrders]})
