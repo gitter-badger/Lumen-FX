@@ -1,4 +1,4 @@
-/*
+/**
  *	<LumenFX: An FX system designed and built by thecitysecret>
  *  Copyright (C) 2015 thecitysecret
  *

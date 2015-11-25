@@ -1,7 +1,6 @@
 /**
-<LumenFX: An FX system designed and built by thecitysecret>
-    Copyright (C) 2015 thecitysecret
-
+ *	<LumenFX: An FX system designed and built by thecitysecret>
+ *  Copyright (C) 2015 thecitysecret
  *
  * Licensed to the Apache Software Foundation (ASF) under one
  * or more contributor license agreements.  See the NOTICE file
@@ -20,7 +19,7 @@
  * specific language governing permissions and limitations
  * under the License.
  * 
-*/
+ */
 
 var assert 		= require('chai').assert,
 	influx 		= require('influx'),

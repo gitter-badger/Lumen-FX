@@ -119,11 +119,11 @@ PriceService.prototype.subscribeOANDA = function(){
  * prices are less active
  * @param pairs - currency to be subscibed to
  */
-PriceService.prototype.subscribeYAHOO = function (pairs){
+PriceService.prototype.subscribeYAHOO = function (){
 	var deferred = Q.defer();
 	var url = 'https://query.yahooapis.com/v1/public/yql' + 
 				'?q=select%20*%20from%20yahoo.finance.xchange%20where%20pair%20in%20(%22' +
-				pairs + '%22)&format=json&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys&callback=';
+				YAHOOPairs + '%22)&format=json&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys&callback=';
 	var req = request(url, function (error, response, body) {
 		if (error) {
 			logger.error(error)
@@ -162,14 +162,14 @@ PriceService.prototype.subscribeYAHOO = function (pairs){
 PriceService.prototype.getPrice = function (args,done){
 	
 	if(this.subscribeYAHOO != undefined){
-		this.subscribeYAHOO(YAHOOPairs).then(function(data){
+		this.subscribeYAHOO().then(function(data){
 				if ( data.query != undefined && data.query.count > 0){
 					var exoticPrices = data.query.results.rate;
 					exoticPrices = transform(exoticPrices);
 			}
 		})
 	}else{
-			PriceService.prototype.subscribeYAHOO(YAHOOPairs).then(function(data){
+			PriceService.prototype.subscribeYAHOO().then(function(data){
 				if ( data.query != undefined && data.query.count > 0){
 					var exoticPrices = data.query.results.rate;
 					exoticPrices = transform(exoticPrices);

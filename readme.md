@@ -101,5 +101,6 @@ LumenFX is built and maintained by [thecitysecret](http://www.thecitysecret.com/
 ![thecitysecretltd](http://s23.postimg.org/r9800h063/tcs.jpg?raw=true "thecitysecretltd")
 
 ##License
+Copyright (C) 2015 thecitysecret
 LumenFX is released as Open Source Software under the [Apache 2.0](http://www.apache.org/licenses/LICENSE-2.0)
 

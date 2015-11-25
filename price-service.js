@@ -23,6 +23,7 @@
 "use strict";
 var seneca = require('seneca')()
 var	host   = require('./public/config/host').host;
+var today	 = new Date();
 seneca
 	.use('Price')
 	.listen({host:host,port:9002,pin:{role:'priceAPI'}})
@@ -35,10 +36,11 @@ seneca
 */
 seneca.act({role:'priceAPI', cmd:'initPrice'},function(args,done){
 	
-setInterval(function(){
-	seneca.act({role:'priceAPI', cmd:'getPrice',data:done.results})
-},200);
-	
+	if( today.getDay() > 0 && today.getDay() < 6 )
+		setInterval(function(){
+			seneca.act({role:'priceAPI', cmd:'getPrice',data:done.results})
+		},200);
+
 setInterval(function(){
 seneca.act({role:'priceAPI', cmd:'showPrice'},function(args,done){	
 	seneca.act({role:'priceAPI',cmd:'persistData',data:done.data})

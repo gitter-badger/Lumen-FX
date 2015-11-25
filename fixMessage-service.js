@@ -19,8 +19,7 @@
  * specific language governing permissions and limitations
  * under the License.
  * 
- 
- **/
+ */
 
 var seneca = require('seneca')();
 var	host   = require('./public/config/host').host;
