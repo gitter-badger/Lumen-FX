@@ -1,5 +1,7 @@
 # LumenFX
 
+[![Join the chat at https://gitter.im/thecitysecretltd/Lumen-FX](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/thecitysecretltd/Lumen-FX?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 ## Introduction
 
 LumenFX is an interactive platform that supports real-time financial data visualization, as well as historical data lookup for sparklines and OHLC charts. It executes simple trading rules in real time with an automated trade engine which also executes limit and stop orders. This application was written with Node.JS, SenecaJS and AngularJS.
